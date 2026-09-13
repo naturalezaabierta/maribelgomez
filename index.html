@@ -1,0 +1,985 @@
+<!-- =========================================================
+     LANDING PAGE · MARIBEL GÓMEZ
+     Naturaleza Abierta — Sanación Arcangélica y Holística
+     ========================================================= -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* =========================================================
+   VARIABLES EDITABLES (PALETA ARMONIZADA FEMENINA Y ELEGANTE)
+   ========================================================= */
+.mg-page {
+    --oro: #c49a45;
+    --oro-claro: #e2c88d;
+    --verde: #233b32;
+    --verde-profundo: #14241e;
+    --crema: #faf6f0;
+    --rosa-suave: #f3e5df;
+    --blanco: #ffffff;
+    --texto: #33312e;
+    --gris: #706b66;
+    --negro: #111513;
+
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--texto);
+    background: var(--crema);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.mg-page * {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+.mg-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HERO (PC)
+   ========================================================= */
+.mg-hero {
+    min-height: 760px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20,36,30,.95) 0%,
+            rgba(20,36,30,.78) 42%,
+            rgba(20,36,30,.32) 75%,
+            rgba(20,36,30,.10) 100%
+        ),
+        url("https://www.naturalezaabierta.com/wp-content/uploads/2026/04/Maribel-Gomez.jpg")
+        center center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mg-hero-content {
+    width: min(1180px, 92%);
+    margin: auto;
+    padding: 90px 0;
+}
+
+.mg-eyebrow {
+    color: var(--oro-claro);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+/* NOMBRE EN PC */
+.mg-hero h1 {
+    color: var(--blanco);
+    font-size: clamp(54px, 8.5vw, 120px);
+    line-height: .92;
+    font-weight: 400;
+    margin: 0 0 25px;
+    max-width: 850px;
+    letter-spacing: -1.5px;
+}
+
+.mg-hero h1 span {
+    color: var(--oro-claro);
+}
+
+.mg-hero-subtitle {
+    color: rgba(255,255,255,.90);
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.65;
+    max-width: 650px;
+    margin-bottom: 38px;
+}
+
+.mg-divider {
+    width: 90px;
+    height: 2px;
+    background: var(--oro);
+    margin: 25px 0;
+}
+
+/* =========================================================
+   BOTONES GLOBALES
+   ========================================================= */
+.mg-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #dfc27e, #b88d3b);
+    color: #1a1710 !important;
+    text-decoration: none !important;
+    padding: 19px 36px;
+    border-radius: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    box-shadow: 0 12px 35px rgba(0,0,0,.25);
+    transition: all .3s ease;
+}
+
+.mg-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 17px 40px rgba(0,0,0,.35);
+}
+
+/* =========================================================
+   INTRODUCCIÓN
+   ========================================================= */
+.mg-intro {
+    background: var(--crema);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mg-intro-inner {
+    max-width: 840px;
+    margin: auto;
+}
+
+.mg-small-title {
+    color: var(--oro);
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.mg-intro h2 {
+    color: var(--verde);
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 18px 0 30px;
+}
+
+.mg-intro p {
+    font-size: 21px;
+    line-height: 1.85;
+    color: #4a4843;
+}
+
+/* =========================================================
+   PARA QUIÉN ES
+   ========================================================= */
+.mg-identificacion {
+    background: #f4ede4;
+    padding: 100px 0;
+}
+
+.mg-section-heading {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.mg-section-heading h2 {
+    color: var(--verde);
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.mg-section-heading p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--gris);
+}
+
+.mg-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.mg-card {
+    background: rgba(255,255,255,.82);
+    padding: 38px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(196,154,69,.22);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.mg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.mg-card-icon {
+    color: var(--oro);
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.mg-card h3 {
+    color: var(--verde);
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0 0 14px;
+}
+
+.mg-card p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #58564f;
+    margin: 0;
+}
+
+/* =========================================================
+   EXPERIENCIA
+   ========================================================= */
+.mg-experiencia {
+    background: var(--verde-profundo);
+    color: white;
+    padding: 110px 0;
+}
+
+.mg-experiencia .mg-small-title {
+    color: var(--oro-claro);
+}
+
+.mg-experiencia h2 {
+    color: white;
+    font-size: clamp(35px, 5vw, 55px);
+    font-weight: 400;
+    text-align: center;
+    margin: 15px auto 65px;
+    max-width: 820px;
+}
+
+.mg-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.mg-step {
+    text-align: center;
+    padding: 25px 15px;
+    position: relative;
+}
+
+.mg-step-number {
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid var(--oro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--oro-claro);
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.mg-step h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.mg-step p {
+    color: rgba(255,255,255,.75);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* =========================================================
+   FOTO ENTREVISTA / PERFIL
+   ========================================================= */
+.mg-entrevista {
+    background: var(--crema);
+    padding: 110px 0;
+}
+
+.mg-entrevista-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: center;
+}
+
+.mg-entrevista-image {
+    position: relative;
+}
+
+.mg-entrevista-image img {
+    width: 100%;
+    display: block;
+    border-radius: 28px;
+    box-shadow: 0 25px 60px rgba(0,0,0,.16);
+}
+
+.mg-entrevista-image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid rgba(196,154,69,.40);
+    border-radius: 28px;
+    top: 16px;
+    left: 16px;
+    z-index: -1;
+}
+
+.mg-entrevista-text .mg-small-title {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.mg-entrevista-text h2 {
+    color: var(--verde);
+    font-size: clamp(35px, 5vw, 55px);
+    font-weight: 400;
+    line-height: 1.18;
+    margin: 0 0 25px;
+}
+
+.mg-entrevista-text p {
+    font-size: 19px;
+    line-height: 1.9;
+    color: #4f4d46;
+}
+
+/* =========================================================
+   FRASE DESTACADA
+   ========================================================= */
+.mg-quote {
+    background:
+        linear-gradient(rgba(20,36,30,.88), rgba(20,36,30,.88)),
+        url("https://www.naturalezaabierta.com/wp-content/uploads/2026/04/Maribel-Gomez.jpg")
+        center 30% / cover no-repeat;
+    padding: 110px 20px;
+    text-align: center;
+}
+
+.mg-quote p {
+    max-width: 850px;
+    margin: auto;
+    color: white;
+    font-size: clamp(28px, 4vw, 45px);
+    line-height: 1.5;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.mg-quote span {
+    display: block;
+    width: 70px;
+    height: 2px;
+    background: var(--oro);
+    margin: 30px auto 0;
+}
+
+/* =========================================================
+   OFERTA
+   ========================================================= */
+.mg-offer {
+    background: var(--crema);
+    padding: 110px 0;
+    text-align: center;
+}
+
+.mg-offer-box {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    border-radius: 28px;
+    padding: 55px 35px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.10);
+    border: 1px solid rgba(196,154,69,.25);
+}
+
+.mg-offer-box .mg-small-title {
+    color: var(--oro);
+}
+
+.mg-offer-box h2 {
+    color: var(--verde);
+    font-size: 40px;
+    font-weight: 400;
+    margin: 15px 0 10px;
+}
+
+.mg-duration {
+    font-family: Arial, sans-serif;
+    color: #6f6b63;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.mg-price {
+    color: var(--verde);
+    font-family: Arial, sans-serif;
+    font-size: 62px;
+    font-weight: 700;
+    margin: 10px 0 30px;
+}
+
+.mg-offer-description {
+    font-size: 18px;
+    line-height: 1.75;
+    color: #5a5851;
+    margin-bottom: 30px;
+}
+
+/* =========================================================
+   MÉTODOS DE PAGO
+   ========================================================= */
+.mg-payment {
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top: 1px solid #e5dfd3;
+}
+
+.mg-payment-title {
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #88847a;
+    margin-bottom: 18px;
+}
+
+.mg-payment img {
+    width: 100%;
+    max-width: 580px;
+    border-radius: 16px;
+    display: block;
+    margin: auto;
+}
+
+/* =========================================================
+   CIERRE
+   ========================================================= */
+.mg-final {
+    background: var(--verde);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.mg-final h2 {
+    color: white;
+    font-size: clamp(34px, 5vw, 55px);
+    font-weight: 400;
+    max-width: 850px;
+    margin: 0 auto 25px;
+    line-height: 1.25;
+}
+
+.mg-final p {
+    color: rgba(255,255,255,.80);
+    max-width: 650px;
+    margin: 0 auto 35px;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.mg-final .mg-button {
+    margin-top: 10px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.mg-footer {
+    background: #0d1713;
+    color: rgba(255,255,255,.6);
+    text-align: center;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.mg-footer strong {
+    color: var(--oro-claro);
+}
+
+/* =========================================================
+   RESPONSIVE MÓVIL Y TABLET (HASTA 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* SECCIÓN HERO EN MÓVIL */
+    .mg-hero {
+        min-height: 800px;
+        height: 800px;
+        background:
+            linear-gradient(
+                180deg,
+                rgba(14,26,21,.08) 0%,
+                rgba(14,26,21,.42) 42%,
+                rgba(14,26,21,.85) 65%,
+                rgba(14,26,21,.98) 92%
+            ),
+            url("https://www.naturalezaabierta.com/wp-content/uploads/2026/04/Maribel-Gomez.jpg")
+            center top / cover no-repeat;
+        align-items: flex-start;
+    }
+
+    .mg-hero-content {
+        width: 90%;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        text-align: center;
+    }
+
+    .mg-eyebrow {
+        margin-top: 42px;
+        margin-bottom: 12px;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    /* NOMBRE Y APELLIDO EN UNA SOLA LÍNEA SIN TAPAR EL ROSTRO */
+    .mg-hero h1 {
+        font-size: 46px !important;
+        line-height: 1.1 !important;
+        margin: 0 auto 12px !important;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+
+    .mg-hero h1 br {
+        display: none;
+    }
+
+    .mg-hero h1 span {
+        margin-left: 8px;
+    }
+
+    .mg-divider {
+        width: 55px;
+        margin: 10px auto 0;
+    }
+
+    /* PÁRRAFO INFERIOR */
+    .mg-hero-subtitle {
+        position: absolute;
+        left: 50%;
+        bottom: 125px;
+        transform: translateX(-50%);
+        width: 92%;
+        max-width: 370px;
+        margin: 0;
+        font-size: 17px !important;
+        line-height: 1.55;
+        text-align: center;
+    }
+
+    /* BOTÓN HERO */
+    .mg-hero .mg-button {
+        position: absolute;
+        left: 50%;
+        bottom: 42px;
+        transform: translateX(-50%);
+        width: 92%;
+        max-width: 350px;
+        padding: 17px 20px;
+        font-size: 13px;
+        z-index: 10;
+    }
+
+    /* BOTONES OTRAS SECCIONES EN MÓVIL */
+    .mg-offer-box .mg-button,
+    .mg-final .mg-button {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 15px auto 0 !important;
+        display: inline-flex !important;
+    }
+
+    /* RESTO DE SECCIONES */
+    .mg-intro,
+    .mg-identificacion,
+    .mg-experiencia,
+    .mg-entrevista,
+    .mg-offer {
+        padding: 70px 0;
+    }
+
+    .mg-intro h2,
+    .mg-section-heading h2,
+    .mg-experiencia h2,
+    .mg-entrevista-text h2,
+    .mg-final h2 {
+        font-size: 32px !important;
+        line-height: 1.25;
+    }
+
+    .mg-intro p,
+    .mg-section-heading p,
+    .mg-entrevista-text p,
+    .mg-offer-description,
+    .mg-final p {
+        font-size: 18px !important;
+        line-height: 1.75;
+    }
+
+    .mg-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .mg-card {
+        padding: 30px 24px;
+    }
+
+    .mg-card h3 {
+        font-size: 22px;
+    }
+
+    .mg-card p {
+        font-size: 17px;
+    }
+
+    .mg-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .mg-step {
+        padding: 15px 8px;
+    }
+
+    .mg-step h3 {
+        font-size: 19px;
+    }
+
+    .mg-step p {
+        font-size: 15px;
+    }
+
+    .mg-entrevista-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .mg-entrevista-text {
+        text-align: left;
+    }
+
+    .mg-quote {
+        padding: 85px 22px;
+    }
+
+    .mg-quote p {
+        font-size: 26px !important;
+        line-height: 1.5;
+    }
+
+    .mg-offer-box {
+        padding: 45px 22px;
+        border-radius: 22px;
+    }
+
+    .mg-offer-box h2 {
+        font-size: 34px;
+    }
+
+    .mg-price {
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 380px) {
+    .mg-hero h1 {
+        font-size: 36px !important;
+    }
+    .mg-hero-subtitle {
+        bottom: 115px;
+        font-size: 15px !important;
+    }
+    .mg-hero .mg-button {
+        bottom: 34px;
+        padding: 15px 16px;
+        font-size: 12px;
+    }
+}
+</style>
+
+<!-- =========================================================
+     CONTENIDO
+     ========================================================= -->
+<div class="mg-page">
+
+    <!-- HERO -->
+    <section class="mg-hero">
+        <div class="mg-hero-content">
+            <div class="mg-eyebrow">
+                Naturaleza Abierta · Sanación Arcangélica & Holística
+            </div>
+
+            <h1>
+                Maribel<br>
+                <span>Gómez</span>
+            </h1>
+
+            <div class="mg-divider"></div>
+
+            <p class="mg-hero-subtitle">
+                Un puente de luz, paz y armonización energética. Espacio terapéutico 
+                de acompañamiento intuitivo guiado por la sabiduría y frecuencia arcangélica.
+            </p>
+
+            <a
+                class="mg-button"
+                href="https://www.naturalezaabierta.com/finalizar-compra/?add-to-cart=4262"
+            >
+                Sesión Telefónica (50 min) · $25
+            </a>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="mg-intro">
+        <div class="mg-container">
+            <div class="mg-intro-inner">
+                <div class="mg-small-title">
+                    Un santuario de calma
+                </div>
+
+                <h2>
+                    Permite que la luz ordene y restaure tu energía interior.
+                </h2>
+
+                <p>
+                    El ajetreo diario, las cargas emocionales y los bloqueos del pasado 
+                    suelen nublar nuestra paz. Esta sesión personalizada es un espacio 
+                    amoroso para liberar cargas, recibir guía celestial y devolverle la 
+                    claridad, el equilibrio y la armonía a tu cuerpo físico y espiritual.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDENTIFICACIÓN -->
+    <section class="mg-identificacion">
+        <div class="mg-container">
+            <div class="mg-section-heading">
+                <div class="mg-small-title">
+                    Sintonía y bienestar
+                </div>
+
+                <h2>
+                    Este espacio sagrado es para ti si...
+                </h2>
+
+                <p>
+                    No necesitas estar rota ni agotada para buscar luz; basta con 
+                    abrir el corazón a una vibración más alta y sanadora.
+                </p>
+            </div>
+
+            <div class="mg-cards">
+                <div class="mg-card">
+                    <div class="mg-card-icon">🪽</div>
+                    <h3>Sientes cansancio emocional</h3>
+                    <p>
+                        Cuando experimentas pesadez inexplicable, estrés acumulado 
+                        o sientes que tu energía vital se drena con facilidad en tu entorno.
+                    </p>
+                </div>
+
+                <div class="mg-card">
+                    <div class="mg-card-icon">✨</div>
+                    <h3>Buscas claridad y guía</h3>
+                    <p>
+                        Necesitas respuestas serenas y mensajes de luz para tomar decisiones 
+                        importantes, soltar incertidumbres o comprender una etapa difícil.
+                    </p>
+                </div>
+
+                <div class="mg-card">
+                    <div class="mg-card-icon">🌸</div>
+                    <h3>Deseas armonizar tu campo</h3>
+                    <p>
+                        Quieres limpiar tus centros energéticos, abrirte al amor propio y 
+                        reconectar con tu paz interior desde la frecuencia arcangélica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="mg-experiencia">
+        <div class="mg-container">
+            <div class="mg-small-title" style="text-align:center;">
+                El proceso terapéutico
+            </div>
+
+            <h2>
+                Un viaje amoroso hacia tu centro, paso a paso.
+            </h2>
+
+            <div class="mg-steps">
+                <div class="mg-step">
+                    <div class="mg-step-number">01</div>
+                    <h3>Acogida</h3>
+                    <p>Abrimos un campo sagrado de escucha receptiva donde expresas tus inquietudes con total confianza.</p>
+                </div>
+
+                <div class="mg-step">
+                    <div class="mg-step-number">02</div>
+                    <h3>Canalización</h3>
+                    <p>Sintonizamos con la asistencia arcangélica para identificar bloqueos y necesidades energéticas prioritarias.</p>
+                </div>
+
+                <div class="mg-step">
+                    <div class="mg-step-number">03</div>
+                    <h3>Sanación</h3>
+                    <p>Transmutación de emociones densas y armonización vibratoria de tus chakras y campo áurico.</p>
+                </div>
+
+                <div class="mg-step">
+                    <div class="mg-step-number">04</div>
+                    <h3>Integración</h3>
+                    <p>Te entrego recomendaciones claras y prácticas sencillas para preservar tu frecuencia en tu día a día.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MARIBEL GÓMEZ -->
+    <section class="mg-entrevista">
+        <div class="mg-container">
+            <div class="mg-entrevista-grid">
+                <div class="mg-entrevista-image">
+                    <img
+                        src="https://www.naturalezaabierta.com/wp-content/uploads/2026/04/mary.jpg"
+                        alt="Maribel Gómez — Terapeuta Holística y Sanación Arcangélica"
+                    >
+                </div>
+
+                <div class="mg-entrevista-text">
+                    <div class="mg-small-title">
+                        Conoce a Maribel
+                    </div>
+
+                    <h2>
+                        Acompañamiento dulce, empático y consciente.
+                    </h2>
+
+                    <p>
+                        Maribel Gómez integra la calidez humana con una profunda conexión 
+                        intuitiva y energética. Su misión dentro de Naturaleza Abierta 
+                        es facilitarte herramientas de reconexión interior, liberación y paz.
+                    </p>
+
+                    <p>
+                        A través de la sanación arcangélica y la armonización holística, 
+                        te guía para soltar aquello que ya cumplió su ciclo y permitir 
+                        que tu ser recupere su ligereza y brillo natural.
+                    </p>
+
+                    <p>
+                        Cada sesión es totalmente privada, cálida y confidencial, diseñada 
+                        para que te sientas sostenida, comprendida y en total serenidad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRASE -->
+    <section class="mg-quote">
+        <p>
+            “Cuando abres tu corazón a la luz divina, la paz deja de ser un destino 
+            y se convierte en tu estado natural.”
+        </p>
+        <span></span>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="mg-offer">
+        <div class="mg-container">
+            <div class="mg-offer-box">
+                <div class="mg-small-title">
+                    Tu momento de sanación
+                </div>
+
+                <h2>Sesión personalizada</h2>
+
+                <div class="mg-duration">
+                    Sesión telefónica · 50 minutos de acompañamiento
+                </div>
+
+                <div class="mg-price">
+                    $25
+                </div>
+
+                <p class="mg-offer-description">
+                    Regálate este espacio íntimo para armonizar tu energía, liberar 
+                    cargas y recibir guía espiritual directamente con Maribel Gómez.
+                </p>
+
+                <a
+                    class="mg-button"
+                    href="https://www.naturalezaabierta.com/finalizar-compra/?add-to-cart=4262"
+                >
+                    Sesión Telefónica (50 min)
+                </a>
+
+                <div class="mg-payment">
+                    <div class="mg-payment-title">
+                        Métodos de pago disponibles
+                    </div>
+
+                    <img
+                        src="https://www.naturalezaabierta.com/wp-content/uploads/2026/09/pagos-metodos3-scaled.png"
+                        alt="Métodos de pago Naturaleza Abierta"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="mg-final">
+        <div class="mg-container">
+            <h2>
+                El primer paso hacia tu paz interior comienza hoy.
+            </h2>
+
+            <p>
+                Mereces vivir con serenidad, liviandad y claridad. Permítete 
+                recibir el cuidado y la armonización que tu alma está pidiendo.
+            </p>
+
+            <a
+                class="mg-button"
+                href="https://www.naturalezaabierta.com/finalizar-compra/?add-to-cart=4262"
+            >
+                Reservar con Maribel · $25
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mg-footer">
+        Naturaleza Abierta · <strong>Maribel Gómez</strong>
+    </footer>
+
+</div>
